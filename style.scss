@@ -805,192 +805,192 @@ header {
 
 //Responsive
 
+/* ===========================
+   1280px
+=========================== */
 @media screen and (max-width:1280px) {
   .home {
     .home-info {
       .left {
         h1 {
-          font-size:4em;
+          font-size: 4em;
         }
       }
 
       .right {
         .profile {
-            img {
-                width: 400px;
-                height: 400px;
-
-            }
+          img {
+            width: 400px;
+            height: 400px;
+          }
         }
       }
     }
   }
+
   .skills {
     .skills-container {
-        justify-content: center;
+      justify-content: center;
     }
   }
 }
 
-
+/* ===========================
+   992px (TABLETS)
+=========================== */
 @media screen and (max-width:992px) {
-    body {
-        section {
-            padding: 8rem 5% 2rem;
+  body section {
+    padding: 8rem 5% 2rem;
+  }
+
+  header {
+    background: var(--mob-color);
+    position: sticky;
+    top: 0;
+    padding: 0 5%;
+    z-index: 999;
+
+    nav {
+      .list-darkmode-menu {
+        ul {
+          position: fixed;
+          top: 89px;
+          left: -100%;
+          width: 60%;
+          height: 100vh;
+          background: var(--mob-color);
+          flex-direction: column;
+          gap: 30px;
+          padding: 2rem 5%;
+          transition: 0.3s ease;
+
+          li a {
+            font-size: 22px;
+          }
+
+          &.active {
+            left: 0%;
+          }
         }
-    }
 
-    header {
-        background:var(--mob-color);
-        position: sticky;
-        top: 0;
-        padding: 0 5%;
-        z-index: 9;
+        .hamburger {
+          display: block;
 
-
-        nav {
-            .list-darkmode-menu {
-                ul {
-                    position: fixed;
-                    top: 89px;
-                    left: -100px;
-                    max-width: 60%;
-                    width: 100%;
-                    height: 100vh;
-                    background: var(--mob-color);
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    flex-direction: column;
-                    gap: 30px;
-                    padding: 2rem 5% 0;
-                    transition: .3s ease;
-
-                    li {
-                        a {
-                            font-size: 22px;
-                        }
-                    }
-
-                    &.active {
-                        left: 0%;
-                    }
-                }
-
-                .hamburger {
-                    display: block;
-                }
-            }
+          .bar,
+          &::after,
+          &::before {
+            border-radius: 5px;
+          }
         }
+      }
     }
+  }
 
-    .home {
-        padding: 8rem 5% 2rem;
+  .home {
+    padding: 8rem 5% 2rem;
 
-        .home-info {
-            flex-direction: column-reverse;
+    .home-info {
+      flex-direction: column-reverse;
 
-            .left {
-                padding-top: 50%;
+      .left {
+        padding-top: 50%;
 
-                p {
-                    width: 100%;
-                }
-
-                .social {
-                    display: none;
-                }
-            }
-
-            .right {
-                .profile {
-                    margin-top: 25px;
-
-                    image {
-                        width: 375px;
-                        height: 375px;
-
-                        &:hover {
-                            box-shadow: 0 0 60px var(--color);
-                        }
-                    }
-                }
-            }
+        p {
+          width: 100%;
         }
-    }
 
-    .about {
-        .about-wrapper {
-            flex-direction: column-reverse;
-            .about-left {
-                .about-image {
-                    image {
-                        width: 375px;
-                        height: 375px;
-
-                        &:hover {
-                            box-shadow:  0 0 60px var(--color);
-                        }
-                    }
-                }
-            }
+        .social {
+          display: none;
         }
+      }
+
+      .right {
+        .profile {
+          margin-top: 25px;
+
+          img {
+            width: 375px;
+            height: 375px;
+
+            &:hover {
+              box-shadow: 0 0 60px var(--color);
+            }
+          }
+        }
+      }
     }
+  }
+
+  .about {
+    .about-wrapper {
+      flex-direction: column-reverse;
+
+      .about-left {
+        .about-img {
+          img {
+            width: 375px;
+            height: 375px;
+
+            &:hover {
+              box-shadow: 0 0 60px var(--color);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-
+/* ===========================
+   767px (MOBILE)
+=========================== */
 @media screen and (max-width:767px) {
-    header {
-        mav {
-            .list-darkmode-menu {
-                ul{
-                    li{
-                        a {
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
+  header {
+    nav {
+      .list-darkmode-menu {
+        ul li a {
+          font-size: 20px;
         }
+      }
     }
+  }
 
-    .home {
-        .home-info {
-            .left {
-                h1 {
-                    font-size: 3.6px;
-                }
-                h4 {
-                    font-size: 1.8px;
-                }
-                p {
-                    font-size: 14px;
-                }
-            }
-
-            .right {
-                .profile {
-                    image {
-                        width: 350px;
-                        height: 350px;
-                    }
-                }
-            }
+  .home {
+    .home-info {
+      .left {
+        h1 {
+          font-size: 3.6rem;
         }
-    }
-
-    .skills {
-        .skills-container {
-            .skill-card {
-                width: 340px;
-            }
+        h4 {
+          font-size: 1.8rem;
         }
-    }
-
-    .projects {
-        .projects-container {
-            .project-card {
-                width: 340px;
-            }
+        p {
+          font-size: 14px;
         }
+      }
+
+      .right {
+        .profile img {
+          width: 330px;
+          height: 330px;
+        }
+      }
     }
+  }
+
+  .skills {
+    .skills-container {
+      .skill-card {
+        width: 330px;
+      }
+    }
+  }
+
+  .projects {
+    .projects-container {
+      .project-card {
+        width: 330px;
+      }
+    }
+  }
 }
